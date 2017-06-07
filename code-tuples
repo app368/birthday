@@ -1,0 +1,27 @@
+let month = "March"
+let date = 1
+let leapYear = false
+
+let namesOfMonthArray = ["January", "February", "March", "May", "June", "July", "August", "September", "October", "November", "December"]
+var numberOfDaysInMonthArray = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+var arrayOfTuples = [(namesOfMonth:String, numberOfDaysInMonth:Int)]()
+for i in 0..<11{
+    arrayOfTuples.append((namesOfMonthArray[i], numberOfDaysInMonthArray[i]))
+}
+
+var amountOfDays = 0
+
+if leapYear{
+    arrayOfTuples[1].1 = 29
+}
+
+for (names, number) in arrayOfTuples{
+    if names != month{
+        amountOfDays += number
+    }
+    else{
+        break
+    }
+}
+print(amountOfDays + date - 1)
