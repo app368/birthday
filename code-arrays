@@ -11,7 +11,7 @@ if leapYear{
     numberOfDaysInMonth[1] = 29
 }
 
-for i in 0..<12{
+for i in 0..<11{
     if namesOfMonth[i] != month{
         amountOfDays += numberOfDaysInMonth[i]
     }
