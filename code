@@ -1,0 +1,22 @@
+let month = "March"
+let date = 1
+let leapYear = false
+
+let namesOfMonth = ["January", "February", "March", "May", "June", "July", "August", "September", "October", "November", "December"]
+var numberOfDaysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+var amountOfDays = 0
+
+if leapYear{
+    numberOfDaysInMonth[1] = 29
+}
+
+for i in 0..<12{
+    if namesOfMonth[i] != month{
+        amountOfDays += numberOfDaysInMonth[i]
+    }
+    else{
+        break
+    }
+}
+print(amountOfDays + date - 1)
